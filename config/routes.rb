@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'relationships/followings'
-  get 'relationships/followers'
+  get 'searchs/search'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
 
@@ -19,6 +18,8 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
   end
 
+  get '/search', to: 'searchs#search'
+# 　get '/search', to: 'searchs#search'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 end

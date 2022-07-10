@@ -28,6 +28,19 @@
               <i class="fas fa-sign-out-alt"></i> logout
             <% end %>
           </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class='col-md-3'>
+    </div>
+    <div class="col-md-8">
+          <%= render 'searchs/searching' %>
+    </div>
+  </div>
+
         <% else %>
           <li>
             <%= link_to root_path,class: 'nav-link text-light' do %>
